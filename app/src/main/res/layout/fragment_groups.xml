@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundgrey2"
+    tools:context=".GroupsFrag">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- TODO: Update blank fragment layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/grupoa"
+                android:layout_width="398dp"
+                android:layout_height="217dp"
+                android:src="@drawable/grupoaft" />
+
+            <ImageView
+                android:id="@+id/grupob"
+                android:layout_width="398dp"
+                android:layout_height="174dp"
+                android:src="@drawable/grupobft" />
+
+            <ImageView
+                android:id="@+id/grupoc"
+                android:layout_width="401dp"
+                android:layout_height="329dp"
+                android:src="@drawable/grupocft" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

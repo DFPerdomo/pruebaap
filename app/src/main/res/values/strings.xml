@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">COPA AMÉRICA 2019</string>
+    <string name="logo">Logo</string>
+    <string name="positions_button">Positions</string>
+    <string name="matches_button">Matches</string>
+    <string name="searchplayer_button">Search Player</string>
+    <string name="news_button">News</string>
+    <string name="groups_button">Groups</string>
+    <string name="brackets_button">Brackets</string>
+    <string name="nmurl">https://api.myjson.com/bins/12shgt</string>
+</resources>
