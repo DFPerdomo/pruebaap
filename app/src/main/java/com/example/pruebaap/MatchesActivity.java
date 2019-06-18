@@ -26,22 +26,23 @@ public class MatchesActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.rvmatches);
         manager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(manager);
-        adapter = new AdapterReciclerView(this,getlistmatches);
+        adapter = new AdapterReciclerView(this, getlistmatches);
         recyclerView.setAdapter(adapter);
-    private ArrayList<MItem> getlistmatches[]{
+    }
+    private ArrayList<MItem> getlistmatches(){
         ArrayList<MItem> ListMatches = new ArrayList<>();
-        ListMatches.add((new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
-        ListMatches.add((new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
-        ListMatches.add((new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
-        ListMatches.add((new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
-        ListMatches.add((new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
-        ListMatches.add((new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
-        ListMatches.add((new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
-        ListMatches.add((new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
-        ListMatches.add((new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
+        ListMatches.add(new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
+        ListMatches.add(new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
+        ListMatches.add(new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
+        ListMatches.add(new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
+        ListMatches.add(new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
+        ListMatches.add(new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
+        ListMatches.add(new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
+        ListMatches.add(new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
+        ListMatches.add(new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
 
             return listMatches;
-    }
+
     }
 
     @Override
