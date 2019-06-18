@@ -30,18 +30,18 @@ public class MatchesActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
     }
     private ArrayList<MItem> getlistmatches(){
-        ArrayList<MItem> ListMatches = new ArrayList<>();
-        ListMatches.add(new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
-        ListMatches.add(new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
-        ListMatches.add(new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
-        ListMatches.add(new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
-        ListMatches.add(new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
-        ListMatches.add(new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
-        ListMatches.add(new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
-        ListMatches.add(new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
-        ListMatches.add(new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
+        ArrayList<MItem> mlistItem = new ArrayList<>();
+        mlistItem.add(new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
+        mlistItem.add(new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
+        mlistItem.add(new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
+        mlistItem.add(new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
+        mlistItem.add(new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
+        mlistItem.add(new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
+        mlistItem.add(new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
+        mlistItem.add(new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
+        mlistItem.add(new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
 
-            return listMatches;
+            return mlistItem;
 
     }
 
