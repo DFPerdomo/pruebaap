@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <android.support.constraint.ConstraintLayout
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:background="@drawable/backgroundgrey2"
+        android:layout_height="match_parent">
 
 
         <LinearLayout
             android:id="@+id/stackcontent"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/backgroundgrey2"
             android:orientation="vertical"
             tools:context=".MainActivity">
 
@@ -113,7 +109,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
                 android:background="#000F49"
-                android:text="Next Matches"
+                android:text="@string/inbuton"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -123,11 +119,9 @@
             <ListView
                 android:id="@+id/nmListView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:background="#80012A82" />
 
         </LinearLayout>
 
-    </android.support.constraint.ConstraintLayout>
-
-</ScrollView>
+</android.support.constraint.ConstraintLayout>

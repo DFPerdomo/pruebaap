@@ -47,11 +47,13 @@ public class MainActivity extends AppCompatActivity {
     Button positionsButton, matchesButton, searchPlayerButton, newsButton, inbButton;
     ListView nmListView;
 
-    String nmItemsd [] = {"","","","","","","","",""};
-    String nmItemsh[] = {"","","","","","","","",""};
-    String nmItemsc[] = {"","","","","","","","",""};
-    int[] nmItemsFlags1 = {R.drawable.brazil, R.drawable.venezuela, R.drawable.argentina, R.drawable.paraguay, R.drawable.uruguay, R.drawable.peru, R.drawable.colombia, R.drawable.qatar, R.drawable.ecuador};
-    int[] nmItemsFlags2 = {R.drawable.bolivia, R.drawable.peru, R.drawable.colombia, R.drawable.qatar, R.drawable.ecuador, R.drawable.venezuela, R.drawable.argentina, R.drawable.paraguay, R.drawable.uruguay};
+    String nmItemsd[] = {"","","","","",""};
+    String nmItemsh[] = {"","","","","",""};
+    String nmItemsc[] = {"","","","","",""};
+    //int [] nmItemsFlags1 = {};
+    //int [] nmItemsFlags2 = {};
+    int[] nmItemsFlags1 = {R.drawable.japan, R.drawable.bolivia, R.drawable.brazil, R.drawable.colombia, R.drawable.argentina, R.drawable.uruguay};
+    int[] nmItemsFlags2 = {R.drawable.chile, R.drawable.peru, R.drawable.venezuela, R.drawable.qatar, R.drawable.paraguay, R.drawable.japan};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -118,6 +120,8 @@ public class MainActivity extends AppCompatActivity {
                             nmItemsd [i] = nmItem.getDate();
                             nmItemsh [i] = nmItem.getHour();
                             nmItemsc [i] = nmItem.getCity();
+                            //nmItemsFlags1 [i] = R.drawable.(nmItem.getFlag1());
+                            //nmItemsFlags2 [i] = R.drawable.(nmItem.getFlag2());
 
                         }
                     } catch (JSONException e) {
@@ -128,7 +132,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        client.excecute("https://api.myjson.com/bins/1d63b9");
+        String myFeed = getApplication().getString(R.string.nmurl);
+        client.excecute(myFeed);
+
     }
 
 

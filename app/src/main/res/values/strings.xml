@@ -7,5 +7,8 @@
     <string name="news_button">News</string>
     <string name="groups_button">Groups</string>
     <string name="brackets_button">Brackets</string>
-    <string name="nmurl">https://api.myjson.com/bins/12shgt</string>
+    <string name="inbuton">Next Matches</string>
+    <string name="nmurl">https://api.myjson.com/bins/nb2c5</string>
+    <string name="add_qr">Add QR</string>
+    <string name="scan_canceled">Scan canceled</string>
 </resources>

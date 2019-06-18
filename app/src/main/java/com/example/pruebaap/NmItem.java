@@ -14,11 +14,15 @@ public class NmItem {
     private String Date;
     private String Hour;
     private String City;
+    private String Flag1;
+    private String Flag2;
 
-    public NmItem(@NonNull String date, String hour, String city) {
+    public NmItem(@NonNull String date, String hour, String city, String flag1, String flag2) {
         this.Date = Date;
         this.Hour = Hour;
         this.City = City;
+        this.Flag1 = flag1;
+        this.Flag2 = flag2;
     }
 
     @NonNull
@@ -50,5 +54,21 @@ public class NmItem {
     public void setCity(String City) {
 
         this.City = City;
+    }
+
+    public String getFlag1() {
+        return Flag1;
+    }
+
+    public void setFlag1(String flag1) {
+        Flag1 = flag1;
+    }
+
+    public String getFlag2() {
+        return Flag2;
+    }
+
+    public void setFlag2(String flag2) {
+        Flag2 = flag2;
     }
 }

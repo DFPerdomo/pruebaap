@@ -4,6 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroundgrey2"
     tools:context=".SearchActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/warning"
+            android:layout_width="251dp"
+            android:layout_height="247dp"
+            android:gravity="center_horizontal"
+            android:text="IF YOU WANT SEARCH A PLAYER PUSH THE QR BUTTON TO ACTIVATE THE QR READER"
+            android:textColor="#CF0000"
+            android:textSize="24sp"
+            android:textStyle="normal|bold" />
+
+        <Button
+            android:id="@+id/addQR"
+            android:layout_width="125dp"
+            android:layout_height="118dp"
+            android:background="@drawable/add_qr"
+            tools:ignore="MissingConstraints"
+            app:showAsAction="always"
+            tools:layout_editor_absoluteX="143dp"
+            tools:layout_editor_absoluteY="489dp" />
+
+        <TextView
+            android:id="@+id/infoplayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="normal|bold|italic" />
+
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
