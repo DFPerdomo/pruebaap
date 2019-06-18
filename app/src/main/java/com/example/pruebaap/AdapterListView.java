@@ -18,16 +18,18 @@ public class AdapterListView extends BaseAdapter {
     String  [] nmItemsd;
     String  [] nmItemsh;
     String  [] nmItemsc;
-    int [] nmItemsFlags1;
-    int [] nmItemsFlags2;
+    int [] nmItemsf1;
+    int [] nmItemsf2;
+    String [] sizelimit;
 
-    public  AdapterListView(Context conexto, String nmItemsd[], String nmItemsh[], String nmItemsc[], int [] nmItemsFlags1, int [] nmItemsFlags2){
+    public  AdapterListView(Context conexto, String nmItemsd[], String nmItemsh[], String nmItemsc[], int [] nmItemsf1, int [] nmItemsf2, String sizelimit []){
         this.contexto = conexto;
         this.nmItemsd = nmItemsd;
         this.nmItemsh = nmItemsh;
         this.nmItemsc = nmItemsc;
-        this.nmItemsFlags1 = nmItemsFlags1;
-        this.nmItemsFlags2 = nmItemsFlags2;
+        this.nmItemsf1 = nmItemsf1;
+        this.nmItemsf2 = nmItemsf2;
+        this.sizelimit = sizelimit;
 
         inflater = (LayoutInflater)conexto.getSystemService(conexto.LAYOUT_INFLATER_SERVICE);
     }
@@ -46,8 +48,9 @@ public class AdapterListView extends BaseAdapter {
         fecha.setText(nmItemsd[i]);
         ciudad.setText(nmItemsh[i]);
         hora.setText(nmItemsc[i]);
-        bandera1.setImageResource(nmItemsFlags1[i]);
-        bandera2.setImageResource(nmItemsFlags2[i]);
+        bandera1.setImageResource(nmItemsf1[i]);
+        bandera2.setImageResource(nmItemsf2[i]);
+
 
         return vista;
     }
@@ -55,7 +58,7 @@ public class AdapterListView extends BaseAdapter {
     @Override
     public int getCount() {
 
-        return nmItemsFlags1.length;
+        return sizelimit.length;
     }
 
     @Override

@@ -8,19 +8,17 @@ import android.support.annotation.NonNull;
 //Create an Entity NmItem which is mapped to a table in the database
 //with id, task and timestamp fields
 @Entity
-public class NmItem {
+public class MItem {
     @NonNull
     @PrimaryKey(autoGenerate = true)
     private String Date;
-    private String Hour;
-    private String City;
+    private String Score;
     private String Flag1;
     private String Flag2;
 
-    public NmItem(@NonNull String date, String hour, String city, String flag1, String flag2) {
+    public MItem(@NonNull String date, String score, String flag1, String flag2) {
         this.Date = Date;
-        this.Hour = Hour;
-        this.City = City;
+        this.Score = Score;
         this.Flag1 = Flag1;
         this.Flag2 = Flag2;
     }
@@ -36,24 +34,9 @@ public class NmItem {
         this.Date = Date;
     }
 
-    public String getHour() {
+    public String getScore() {
 
-        return Hour;
-    }
-
-    public void setHour(String Hour) {
-
-        this.Hour = Hour;
-    }
-
-    public String getCity() {
-
-        return City;
-    }
-
-    public void setCity(String City) {
-
-        this.City = City;
+        return Score;
     }
 
     public String getFlag1() {
