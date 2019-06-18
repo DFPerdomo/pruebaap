@@ -28,8 +28,8 @@ public class MatchesActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(manager);
         adapter = new AdapterReciclerView(this,getlistmatches);
         recyclerView.setAdapter(adapter);
-    private ArrayList<Item> getlistmatches[]{
-        ArrayList<Item> ListMatches = new ArrayList<>();
+    private ArrayList<MItem> getlistmatches[]{
+        ArrayList<MItem> ListMatches = new ArrayList<>();
         ListMatches.add((new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
         ListMatches.add((new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
         ListMatches.add((new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
@@ -40,7 +40,7 @@ public class MatchesActivity extends AppCompatActivity {
         ListMatches.add((new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
         ListMatches.add((new MItem("sábado 15", "0-2", R.drawable.argentina,R.drawable.colombia));
 
-        return ListMatches;
+            return listMatches;
     }
     }
 
