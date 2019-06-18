@@ -42,7 +42,7 @@
         app:layout_constraintGuide_end="120dp" />
 
     <TextView
-        android:id="@+id/date"
+        android:id="@+id/date2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -80,7 +80,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
-        android:id="@+id/flag1"
+        android:id="@+id/flag12"
         android:layout_width="50dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
@@ -93,7 +93,7 @@
         app:srcCompat="@drawable/brazil" />
 
     <ImageView
-        android:id="@+id/flag2"
+        android:id="@+id/flag22"
         android:layout_width="50dp"
         android:layout_height="40dp"
         android:layout_marginTop="4dp"

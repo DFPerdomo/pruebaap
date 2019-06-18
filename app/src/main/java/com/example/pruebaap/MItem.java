@@ -11,16 +11,16 @@ import android.support.annotation.NonNull;
 public class MItem {
     @NonNull
     @PrimaryKey(autoGenerate = true)
-    private String Date;
-    private String Score;
-    private String Flag1;
-    private String Flag2;
+    String Date;
+    String Score;
+    int Flag12;
+    int Flag22;
 
-    public MItem(@NonNull String date, String score, String flag1, String flag2) {
+    public MItem(@NonNull String date, String score, int flag12, int flag22) {
         this.Date = Date;
         this.Score = Score;
-        this.Flag1 = Flag1;
-        this.Flag2 = Flag2;
+        this.Flag12 = Flag12;
+        this.Flag22 = Flag22;
     }
 
     @NonNull
@@ -39,19 +39,24 @@ public class MItem {
         return Score;
     }
 
-    public String getFlag1() {
-        return Flag1;
+    public int getFlag12() {
+
+        return Flag12;
     }
 
-    public void setFlag1(String flag1) {
-        Flag1 = flag1;
+    public void setFlag12(int flag12) {
+
+        Flag12 = flag12;
     }
 
-    public String getFlag2() {
-        return Flag2;
+    public int getFlag22()
+
+    {
+        return Flag22;
     }
 
-    public void setFlag2(String flag2) {
-        Flag2 = flag2;
+    public void setFlag22(int flag22)
+    {
+        Flag22 = flag22;
     }
 }

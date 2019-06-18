@@ -50,8 +50,8 @@ public class MainActivity extends AppCompatActivity {
     String nmItemsd[] = {"","","","","",""};
     String nmItemsh[] = {"","","","","",""};
     String nmItemsc[] = {"","","","","",""};
-   int nmItemsf1 [];
-   int nmItemsf2 [];
+    List<Integer> nmItemsf1 =  new ArrayList<>();
+    List<Integer> nmItemsf2 =  new ArrayList<>();
     String [] sizenmlist = {"1", "2", "3", "4", "5", "6"};
     //int[] nmItemsf1 = {R.drawable.japan, R.drawable.bolivia, R.drawable.brazil, R.drawable.colombia, R.drawable.argentina, R.drawable.uruguay};
     //int[] nmItemsf2 = {R.drawable.chile, R.drawable.peru, R.drawable.venezuela, R.drawable.qatar, R.drawable.paraguay, R.drawable.japan};
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         newsButton = (Button) findViewById(R.id.newsButton);
         inbButton = (Button) findViewById(R.id.inbuton);
         nmListView = (ListView) findViewById(R.id.nmListView);
-        nmListView.setAdapter(new AdapterListView(this, nmItemsd, nmItemsh, nmItemsc, nmItemsf1, nmItemsf2, sizenmlist));
+        //nmListView.setAdapter(new AdapterListView(this, nmItemsd, nmItemsh, nmItemsc, nmItemsf1, nmItemsf2, sizenmlist));
 
         positionsButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -124,91 +124,10 @@ public class MainActivity extends AppCompatActivity {
                             nmItemsh [i] = nmItem.getHour();
                             nmItemsc [i] = nmItem.getCity();
 
-                            switch (nmItem.getFlag1()){
-
-                                case "col":
-                                    nmItemsf1 [i] = R.drawable.colombia;
-                                    break;
-                                case "arg":
-                                    nmItemsf1 [i] = R.drawable.argentina;
-                                    break;
-                                case "per":
-                                    nmItemsf1 [i] = R.drawable.peru;
-                                    break;
-                                case "bol":
-                                    nmItemsf1 [i] = R.drawable.bolivia;
-                                    break;
-                                case "par":
-                                    nmItemsf1 [i] = R.drawable.paraguay;
-                                    break;
-                                case "bra":
-                                    nmItemsf1 [i] = R.drawable.brazil;
-                                    break;
-                                case "ven":
-                                    nmItemsf1 [i] = R.drawable.venezuela;
-                                    break;
-                                case "uru":
-                                    nmItemsf1 [i] = R.drawable.uruguay;
-                                    break;
-                                case "chi":
-                                    nmItemsf1 [i] = R.drawable.chile;
-                                    break;
-                                case "ecu":
-                                    nmItemsf1 [i] = R.drawable.ecuador;
-                                    break;
-                                case "qat":
-                                    nmItemsf1 [i] = R.drawable.qatar;
-                                    break;
-                                case "jap":
-                                    nmItemsf1 [i] = R.drawable.japan;
-                                    break;
-                                default:
-                                    break;
-                            }
-
-                            switch (nmItem.getFlag2()){
-
-                                case "col":
-                                    nmItemsf2 [i] = R.drawable.colombia;
-                                    break;
-                                case "arg":
-                                    nmItemsf2 [i] = R.drawable.argentina;
-                                    break;
-                                case "per":
-                                    nmItemsf2 [i] = R.drawable.peru;
-                                    break;
-                                case "bol":
-                                    nmItemsf2 [i] = R.drawable.bolivia;
-                                    break;
-                                case "par":
-                                    nmItemsf2 [i] = R.drawable.paraguay;
-                                    break;
-                                case "bra":
-                                    nmItemsf2 [i] = R.drawable.brazil;
-                                    break;
-                                case "ven":
-                                    nmItemsf2 [i] = R.drawable.venezuela;
-                                    break;
-                                case "uru":
-                                    nmItemsf2 [i] = R.drawable.uruguay;
-                                    break;
-                                case "chi":
-                                    nmItemsf2 [i] = R.drawable.chile;
-                                    break;
-                                case "ecu":
-                                    nmItemsf2 [i] = R.drawable.ecuador;
-                                    break;
-                                case "qat":
-                                    nmItemsf2 [i] = R.drawable.qatar;
-                                    break;
-                                case "jap":
-                                    nmItemsf2 [i] = R.drawable.japan;
-                                    break;
-                                default:
-                                    break;
-                            }
-
+                            validTypeFlag(nmItem.getFlag1());
+                            validTypeFlagTwo(nmItem.getFlag2());
                         }
+                        nmListView.setAdapter(new AdapterListView(getApplication(), nmItemsd, nmItemsh, nmItemsc, nmItemsf1, nmItemsf2, sizenmlist));
                     } catch (JSONException e) {
                         System.out.println("FALLO!");
                         e.printStackTrace();
@@ -222,6 +141,98 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private void validTypeFlag(String nameFlag) {
+
+        switch (nameFlag){
+
+            case "col":
+                nmItemsf1.add(R.drawable.colombia);
+                break;
+            case "arg":
+                nmItemsf1.add(R.drawable.argentina);
+                break;
+            case "per":
+                nmItemsf1.add(R.drawable.peru);
+                break;
+            case "bol":
+                nmItemsf1.add(R.drawable.bolivia);
+                break;
+            case "par":
+                nmItemsf1.add(R.drawable.paraguay);
+                break;
+            case "bra":
+                nmItemsf1.add(R.drawable.brazil);
+                break;
+            case "ven":
+                nmItemsf1.add(R.drawable.venezuela);
+                break;
+            case "uru":
+                nmItemsf1.add(R.drawable.uruguay);
+                break;
+            case "chi":
+                nmItemsf1.add(R.drawable.chile);
+                break;
+            case "ecu":
+                nmItemsf1.add(R.drawable.ecuador);
+                break;
+            case "qat":
+                nmItemsf1.add(R.drawable.qatar);
+                break;
+            case "jap":
+                nmItemsf1.add(R.drawable.japan);
+                break;
+            default:
+                break;
+        }
+
+
+    }
+
+    private void validTypeFlagTwo(String nameFlag) {
+
+        switch (nameFlag){
+
+            case "col":
+                nmItemsf2.add(R.drawable.colombia);
+                break;
+            case "arg":
+                nmItemsf2.add(R.drawable.argentina);
+                break;
+            case "per":
+                nmItemsf2.add(R.drawable.peru);
+                break;
+            case "bol":
+                nmItemsf2.add(R.drawable.bolivia);
+                break;
+            case "par":
+                nmItemsf2.add(R.drawable.paraguay);
+                break;
+            case "bra":
+                nmItemsf2.add(R.drawable.brazil);
+                break;
+            case "ven":
+                nmItemsf2.add(R.drawable.venezuela);
+                break;
+            case "uru":
+                nmItemsf2.add(R.drawable.uruguay);
+                break;
+            case "chi":
+                nmItemsf2.add(R.drawable.chile);
+                break;
+            case "ecu":
+                nmItemsf2.add(R.drawable.ecuador);
+                break;
+            case "qat":
+                nmItemsf2.add(R.drawable.qatar);
+                break;
+            case "jap":
+                nmItemsf2.add(R.drawable.japan);
+                break;
+            default:
+                break;
+        }
+
+    }
 
     @Override
     protected void onResume() {

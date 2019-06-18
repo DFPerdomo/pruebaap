@@ -1,14 +1,15 @@
 package com.example.pruebaap;
 
-import android.content.Context;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.ImageView;
-import android.widget.TextView;
+        import android.content.Context;
+        import android.view.LayoutInflater;
+        import android.view.View;
+        import android.view.ViewGroup;
+        import android.widget.BaseAdapter;
+        import android.widget.ImageView;
+        import android.widget.TextView;
 
-import java.util.ArrayList;
+        import java.util.ArrayList;
+        import java.util.List;
 
 public class AdapterListView extends BaseAdapter {
 
@@ -18,11 +19,11 @@ public class AdapterListView extends BaseAdapter {
     String  [] nmItemsd;
     String  [] nmItemsh;
     String  [] nmItemsc;
-    int [] nmItemsf1;
-    int [] nmItemsf2;
+    List<Integer> nmItemsf1;
+    List<Integer> nmItemsf2;
     String [] sizelimit;
 
-    public  AdapterListView(Context conexto, String nmItemsd[], String nmItemsh[], String nmItemsc[], int [] nmItemsf1, int [] nmItemsf2, String sizelimit []){
+    public  AdapterListView(Context conexto, String[] nmItemsd, String[] nmItemsh, String[] nmItemsc, List<Integer> nmItemsf1, List<Integer> nmItemsf2, String[] sizelimit){
         this.contexto = conexto;
         this.nmItemsd = nmItemsd;
         this.nmItemsh = nmItemsh;
@@ -48,9 +49,8 @@ public class AdapterListView extends BaseAdapter {
         fecha.setText(nmItemsd[i]);
         ciudad.setText(nmItemsh[i]);
         hora.setText(nmItemsc[i]);
-        bandera1.setImageResource(nmItemsf1[i]);
-        bandera2.setImageResource(nmItemsf2[i]);
-
+        bandera1.setImageResource(nmItemsf1.get(i));
+        bandera2.setImageResource(nmItemsf2.get(i));
 
         return vista;
     }
