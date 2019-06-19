@@ -26,7 +26,7 @@ public class MatchesActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.rvmatches);
         manager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(manager);
-        adapter = new AdapterReciclerView(this, getlistmatches);
+        adapter = new AdapterReciclerView(this, getlistmatches());
         recyclerView.setAdapter(adapter);
     }
     private ArrayList<MItem> getlistmatches(){
